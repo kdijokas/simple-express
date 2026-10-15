@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
 
-// Environment variables with default values
 const PORT = process.env.PORT || 3000;
-const MESSAGE = process.env.MESSAGE || "Hello World! preview";
+const MY_VARIABLE = process.env.MY_VARIABLE || "not set";
 
 app.get("/", (req, res) => {
-    res.send(MESSAGE);
+    res.send(`Hello World! preview — MY_VARIABLE: ${MY_VARIABLE}`);
 });
 
 app.get("/ping", (req, res) => {
