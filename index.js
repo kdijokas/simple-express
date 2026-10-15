@@ -1,18 +1,18 @@
 const express = require("express");
 const app = express();
 
-// Main route
+// Environment variables with default values
+const PORT = process.env.PORT || 3000;
+const MESSAGE = process.env.MESSAGE || "Hello World! preview";
+
 app.get("/", (req, res) => {
-    res.send("Hello World! preview");
+    res.send(MESSAGE);
 });
 
-// /ping route
 app.get("/ping", (req, res) => {
     res.json({ message: "pong" });
 });
 
-// Start server
-const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
