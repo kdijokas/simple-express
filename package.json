@@ -4,7 +4,7 @@
   "description": "A simple Node.js Express app with two endpoints",
   "main": "index.js",
   "scripts": {
-    "build": "node -e \"console.log('Building...'); setTimeout(() => console.log('Build completed!'), 300000)\"",
+    "postinstall": "node -e \"console.log('Waiting 5 minutes...'); setTimeout(() => console.log('Done!'), 300000)\"",
     "start": "node index.js"
   },
   "keywords": [
